@@ -1,0 +1,5 @@
+In /opt/platform-community-4.3.0/ folder, run following commands to change the analyzer and searchIndex for eXo:
+
+find . -name repository-configuration.xml -exec sed -i 's/org\.exoplatform\.services\.jcr\.impl\.core\.query\.lucene\.SearchIndex/net\.wyun\.exo\.CarSearchIndex/g' {} + 
+
+ find . -name repository-configuration.xml -exec sed -i 's/org\.exoplatform\.services\.jcr\.analyzer\.IgnoreAccentAnalyzer/net\.wyun\.exo\.CarAnalyzer/g' {} + 
